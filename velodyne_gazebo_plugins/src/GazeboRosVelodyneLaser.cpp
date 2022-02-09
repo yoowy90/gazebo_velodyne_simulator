@@ -62,7 +62,6 @@ GazeboRosVelodyneLaser::~GazeboRosVelodyneLaser()
 // Load the controller
 void GazeboRosVelodyneLaser::Load(sensors::SensorPtr _parent, sdf::ElementPtr _sdf)
 {
-
   gzdbg << "Loading GazeboRosVelodyneLaser\n";
 
   // Initialize Gazebo node
