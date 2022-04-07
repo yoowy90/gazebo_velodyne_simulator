@@ -86,10 +86,10 @@ GazeboRosVelodyneLaser::~GazeboRosVelodyneLaser()
   laser_queue_.disable();
   if (nh_) {
     nh_->shutdown();
+    callback_laser_queue_thread_.join();
     delete nh_;
     nh_ = NULL;
   }
-  callback_laser_queue_thread_.join();
 }
 
 ////////////////////////////////////////////////////////////////////////////////
