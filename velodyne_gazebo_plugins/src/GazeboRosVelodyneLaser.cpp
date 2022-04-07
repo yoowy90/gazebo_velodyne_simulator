@@ -84,11 +84,22 @@ GazeboRosVelodyneLaser::~GazeboRosVelodyneLaser()
   // Finalize the controller / Custom Callback Queue
   laser_queue_.clear();
   laser_queue_.disable();
+  usleep(1e6);
   if (nh_) {
+    printf("AAA\n");
     nh_->shutdown();
+    usleep(1e6);
+    printf("BBB\n");
     callback_laser_queue_thread_.join();
+    usleep(1e6);
+    printf("CCC\n");
     delete nh_;
+    usleep(1e6);
+    printf("DDD\n");
     nh_ = NULL;
+    usleep(1e6);
+    printf("EEE\n");
+    usleep(1e6);
   }
 }
 
