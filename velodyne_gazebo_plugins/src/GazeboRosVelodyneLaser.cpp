@@ -121,7 +121,7 @@ void GazeboRosVelodyneLaser::Load(sensors::SensorPtr _parent, sdf::ElementPtr _s
   using namespace std::chrono_literals;
   timer_ = ros_node_->create_wall_timer(0.5s, std::bind(&GazeboRosVelodyneLaser::ConnectCb, this));
 
-  RCLCPP_INFO(ros_node_->get_logger(), "Velodyne %slaser plugin ready");
+  RCLCPP_INFO(ros_node_->get_logger(), "Velodyne laser plugin ready");
   gzdbg << "GazeboRosVelodyneLaser LOADED\n";
 }
 
