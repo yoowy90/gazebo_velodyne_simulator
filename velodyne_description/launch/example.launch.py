@@ -57,7 +57,7 @@ def generate_launch_description():
   declare_organize_cloud_cmd = DeclareLaunchArgument(
     'organize_cloud',
     default_value='False',
-    description='Organize PointCloud2 into 2D array with NaN placeholders, otherwise 1D array and leave out invlaid points')
+    description='Organize PointCloud2 into 2D array with NaN placeholders, otherwise 1D array and leave out invalid points')
   gpu = LaunchConfiguration('gpu')
   organize_cloud = LaunchConfiguration('organize_cloud')
   robot_description = Command(['xacro',' ', xacro_path, ' gpu:=', gpu, ' organize_cloud:=', organize_cloud])
